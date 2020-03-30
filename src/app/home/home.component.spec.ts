@@ -34,6 +34,10 @@ describe('HomeComponent', () => {
     expect(component.message).toContain("Users list")
   })
 
+  it("Should have a message2", () => {
+    expect(component.getData()).toBe(10);
+  })
+
   //Determinar la existencia de una etiqueta con un valor específico
   it("Should have an h1 tag", () => {
     expect(debug.query(By.css("h1")).nativeElement.innerText).toBe("Home component");

@@ -14,10 +14,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private homeService: HomeService) { }
 
-  ngOnInit() {
+  getData() {
+    return 10;
+  }
+  ngOnInit() { }
+  /*ngOnInit() {
     this.homeService.getData().subscribe(data => {
       this.data = data;
     })
-  }
+  }*/
 
 }
