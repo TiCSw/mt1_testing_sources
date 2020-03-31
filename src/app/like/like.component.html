@@ -1,1 +1,3 @@
-<button>Like</button>{{ getLikes() }}
+<button (click)="upLikes()">Like</button>
+<button (click)="downLikes()">Dislike</button>
+<span id="likes">{{ getLikes() }}</span>

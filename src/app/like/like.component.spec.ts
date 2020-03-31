@@ -2,10 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LikeComponent } from './like.component';
 import { DebugElement } from '@angular/core';
+import { By } from "@angular/platform-browser";
 
 describe('LikeComponent', () => {
   let component: LikeComponent;
   let fixture: ComponentFixture<LikeComponent>;
+  let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,6 +20,7 @@ describe('LikeComponent', () => {
     fixture = TestBed.createComponent(LikeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    debug = fixture.debugElement;
   });
 
   it('should create', () => {
@@ -38,4 +41,7 @@ describe('LikeComponent', () => {
     expect(component.getLikes()).toEqual(-1);
   })
 
+  it("Component should have a span label with 0 value", () => {
+    expect(debug.query(By.css("#likes")).nativeElement.innerText).toBe("0");
+  })
 });

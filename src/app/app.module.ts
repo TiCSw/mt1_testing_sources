@@ -4,19 +4,18 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LikeComponent } from './like/like.component';
+import { PostModule } from './post/post.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LikeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PostModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 
-export class HomeService {
+export class PostService {
   configUrl = 'assets/data.json';
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
+  getPosts(): Observable<any> {
     return this.http.get(this.configUrl);
   }
 
