@@ -1,10 +1,9 @@
 import { PostService } from "./post.service";
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from "@angular/common/http/testing";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
 describe("PostService", () => {
   let postService: PostService;
-  let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -13,7 +12,6 @@ describe("PostService", () => {
     });
 
     postService = TestBed.get(PostService);
-    httpTestingController = TestBed.get(HttpTestingController);
   });
 
   it("Post number should be equal to 3", () => {
