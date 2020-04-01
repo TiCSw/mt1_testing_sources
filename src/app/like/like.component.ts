@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-like',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./like.component.css']
 })
 export class LikeComponent implements OnInit {
+
+  @Input()
+  id: number;
+
   private likes: number;
 
   constructor() {

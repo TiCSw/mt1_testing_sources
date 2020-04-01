@@ -19,6 +19,7 @@ describe('LikeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LikeComponent);
     component = fixture.componentInstance;
+    component.id = 1;
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
@@ -42,6 +43,6 @@ describe('LikeComponent', () => {
   })
 
   it("Component should have a span label with 0 value", () => {
-    expect(debug.query(By.css("#likes")).nativeElement.innerText).toBe("0");
+    expect(debug.query(By.css("#likes1")).nativeElement.innerText).toBe("0");
   })
 });

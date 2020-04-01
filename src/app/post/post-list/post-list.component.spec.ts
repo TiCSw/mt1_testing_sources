@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DebugElement } from '@angular/core';
 
 import { Post } from '../post';
-import { Observable, of } from 'rxjs';
 
 describe('PostListComponent', () => {
   let component: PostListComponent;
@@ -26,7 +25,7 @@ describe('PostListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PostListComponent);
     component = fixture.componentInstance;
-    component.posts = [new Post("Post 1", "Content of post 1")];
+    component.posts = [new Post(1, "Post 1", "Content of post 1")];
     fixture.detectChanges();
     debug = fixture.debugElement;
 
@@ -45,7 +44,6 @@ describe('PostListComponent', () => {
 
     expect(tag.length).toBe(1);
     expect(tag[0].innerText).toContain("Post 1")
-    console.log(tag[0].innerText)
   })
 
 });

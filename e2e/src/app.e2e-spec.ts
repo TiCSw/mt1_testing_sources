@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, element, by } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,8 +10,18 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to testingApp!');
+    expect(page.getTitleText()).toEqual('List of posts');
   });
+
+  it('Click on button', () => {
+    element(by.id('up1')).click().then(function () {
+      expect(element(by.id('likes1')).getAttribute("innerText")).toBe("1")
+      //element(by.id('likes1')).getAttribute("innerText").
+      //expect(element(by.id('likes1')).nativeElement.innerText).toBe(1);
+    });
+  });
+
+
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

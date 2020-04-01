@@ -1,5 +1,7 @@
 <h1>List of posts</h1>
 
 <ul *ngFor="let post of posts">
-  <li>{{ post.name }}: {{ post.content }} <app-like></app-like></li>
+  <li>
+    {{ post.name }}: {{ post.content }} <app-like id="{{ post.id }}"></app-like>
+  </li>
 </ul>
