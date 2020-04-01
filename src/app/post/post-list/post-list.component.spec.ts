@@ -26,7 +26,7 @@ describe('PostListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PostListComponent);
     component = fixture.componentInstance;
-    component.posts = [new Post("dfd", "dfsd")];
+    component.posts = [new Post("Post 1", "Content of post 1")];
     fixture.detectChanges();
     debug = fixture.debugElement;
 
@@ -41,7 +41,11 @@ describe('PostListComponent', () => {
   })
 
   it("Should have a li tag", () => {
-    expect(debug.query(By.css("ul")).nativeElement.children.length).toBe(1);
+    const tag = debug.query(By.css("ul")).nativeElement.children;
+
+    expect(tag.length).toBe(1);
+    expect(tag[0].innerText).toContain("Post 1")
+    console.log(tag[0].innerText)
   })
 
 });
