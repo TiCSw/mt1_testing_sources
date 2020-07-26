@@ -32,14 +32,18 @@ describe('LikeComponent', () => {
     expect(component.getLikes()).toEqual(0);
   })
 
+  it("Disikes should have a 0 value", () => {
+    expect(component.getDislikes()).toEqual(0);
+  })
+
   it("Likes should increment value", () => {
     component.upLikes();
     expect(component.getLikes()).toEqual(1);
   })
 
-  it("Likes should decrement value", () => {
-    component.downLikes();
-    expect(component.getLikes()).toEqual(-1);
+  it("Dislikes should increment value", () => {
+    component.upDislikes();
+    expect(component.getDislikes()).toEqual(1);
   })
 
   it("Component should have a span label with 0 value", () => {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="f45a03d0dded089a46115d589581f3cd402d281c" datatype="html">
+        <source>List of posts</source>
+        <target>Lista de publicaciones</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

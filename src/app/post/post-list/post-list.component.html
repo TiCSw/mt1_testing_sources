@@ -1,7 +1,9 @@
-<h1>List of posts</h1>
+<h1 i18n>List of posts</h1>
 
-<ul *ngFor="let post of posts">
-  <li>
-    {{ post.name }}: {{ post.content }} <app-like id="{{ post.id }}"></app-like>
-  </li>
-</ul>
+<div class="card" style="width: 50rem;" *ngFor="let post of posts">
+  <div class="card-body">
+    <h5 class="card-title">{{ post.name }}</h5>
+    <p class="card-text">{{ post.content }}</p>
+    <app-like id="{{ post.id }}"></app-like>
+  </div>
+</div>

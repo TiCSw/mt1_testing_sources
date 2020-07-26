@@ -39,8 +39,8 @@ describe('PostListComponent', () => {
     expect(debug.query(By.css("h1")).nativeElement.innerText).toBe("List of posts");
   })
 
-  it("Should have a li tag", () => {
-    const tag = debug.query(By.css("ul")).nativeElement.children;
+  it("Should have a div tag", () => {
+    const tag = debug.query(By.css("div")).nativeElement.children;
 
     expect(tag.length).toBe(1);
     expect(tag[0].innerText).toContain("Post 1")

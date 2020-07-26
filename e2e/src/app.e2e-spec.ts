@@ -13,15 +13,11 @@ describe('workspace-project App', () => {
     expect(page.getTitleText()).toEqual('List of posts');
   });
 
-  it('Click on button', () => {
-    element(by.id('up1')).click().then(function () {
+  it('Click on Like button', () => {
+    element(by.id('btnLike1')).click().then(function () {
       expect(element(by.id('likes1')).getAttribute("innerText")).toBe("1")
-      //element(by.id('likes1')).getAttribute("innerText").
-      //expect(element(by.id('likes1')).nativeElement.innerText).toBe(1);
     });
   });
-
-
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
@@ -31,3 +27,4 @@ describe('workspace-project App', () => {
     } as logging.Entry));
   });
 });
+

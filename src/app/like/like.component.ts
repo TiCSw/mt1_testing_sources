@@ -11,21 +11,27 @@ export class LikeComponent implements OnInit {
   id: number;
 
   private likes: number;
+  private dislikes: number;
 
   constructor() {
     this.likes = 0;
+    this.dislikes = 0;
   }
 
   getLikes() {
     return this.likes;
   }
 
+  getDislikes() {
+    return this.dislikes;
+  }
+
   upLikes() {
     this.likes++;
   }
 
-  downLikes() {
-    this.likes--;
+  upDislikes() {
+    this.dislikes++;
   }
 
   ngOnInit() {
