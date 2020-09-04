@@ -1,7 +1,11 @@
 export class Post {
+  id: number;
+  name: string;
+  content: string;
 
-  constructor(private _id?: number, private _name?: string, private _content?: string) { }
-  get id(): number { return this._id }
-  get name(): string { return this._name; }
-  get content(): string { return this._content; }
+  constructor(id: number, name: string, content: string) {
+    this.id = id;
+    this.name = name;
+    this.content = content;
+  }
 }
